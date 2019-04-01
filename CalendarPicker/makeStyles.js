@@ -57,6 +57,7 @@ export function makeStyles(scaler, backgroundColor, textColor, todayBackgroundCo
 			alignSelf: 'center',
 			justifyContent: 'center',
 			borderTopWidth: 1,
+			borderBottomWidth: 1,
 			borderColor: 'rgba(0,0,0,0.1)',
 		},
 
