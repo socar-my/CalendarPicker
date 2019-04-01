@@ -6,18 +6,37 @@
  */
 
 export const Utils = {
-  START_DATE: 'START_DATE',
-  END_DATE: 'END_DATE',
-  WEEKDAYS: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-  WEEKDAYS_MON: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-  MONTHS: [
-    'January', 'February', 'March', 'April', 'May', 'June', 'July',
-    'August', 'September', 'October', 'November', 'December'
-  ],
-  MAX_ROWS: 7,
-  MAX_COLUMNS: 7,
-  getDaysInMonth: function(month, year) {
-    const lastDayOfMonth = new Date(year, month + 1, 0);
-    return lastDayOfMonth.getDate();
-  },
+	START_DATE: 'START_DATE',
+	END_DATE: 'END_DATE',
+	WEEKDAYS: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+	CUS_WEEKDAYS: [
+		{ key: 'Sun', label: 'S' },
+		{ key: 'Mon', label: 'M' },
+		{ key: 'Tue', label: 'T' },
+		{ key: 'Wed', label: 'W' },
+		{ key: 'Thu', label: 'T' },
+		{ key: 'Fri', label: 'F' },
+		{ key: 'Sat', label: 'S' },
+	],
+	WEEKDAYS_MON: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+	MONTHS: [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December',
+	],
+	MAX_ROWS: 7,
+	MAX_COLUMNS: 7,
+	getDaysInMonth: function(month, year) {
+		const lastDayOfMonth = new Date(year, month + 1, 0);
+		return lastDayOfMonth.getDate();
+	},
 };

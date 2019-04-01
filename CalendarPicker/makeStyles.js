@@ -9,165 +9,175 @@ const DEFAULT_SELECTED_TEXT_COLOR = '#000000';
 const DEFAULT_TODAY_BACKGROUD_COLOR = '#CCCCCC';
 
 export function makeStyles(scaler, backgroundColor, textColor, todayBackgroundColor) {
-  const SELECTED_BG_COLOR = backgroundColor ? backgroundColor : DEFAULT_SELECTED_BACKGROUND_COLOR;
-  const SELECTED_TEXT_COLOR = textColor ? textColor : DEFAULT_SELECTED_TEXT_COLOR;
-  const TODAY_BG_COLOR = todayBackgroundColor ? todayBackgroundColor : DEFAULT_TODAY_BACKGROUD_COLOR;
-  return {
-    calendar: {
-      height: 320*scaler,
-      marginTop: 10*scaler
-    },
+	const SELECTED_BG_COLOR = backgroundColor ? backgroundColor : DEFAULT_SELECTED_BACKGROUND_COLOR;
+	const SELECTED_TEXT_COLOR = textColor ? textColor : DEFAULT_SELECTED_TEXT_COLOR;
 
-    dayButton: {
-      width: 30*scaler,
-      height: 30*scaler,
-      borderRadius: 30*scaler,
-      alignSelf: 'center',
-      justifyContent: 'center'
-    },
+	const TODAY_BG_COLOR = todayBackgroundColor ? todayBackgroundColor : DEFAULT_TODAY_BACKGROUD_COLOR;
+	return {
+		calendar: {
+			height: 320 * scaler,
+			marginTop: 10 * scaler,
+		},
 
-    dayLabel: {
-      fontSize: 14*scaler,
-      color: '#000',
-      alignSelf: 'center'
-    },
+		dayButton: {
+			width: 30 * scaler,
+			height: 30 * scaler,
+			borderRadius: 30 * scaler,
+			alignSelf: 'center',
+			justifyContent: 'center',
+		},
 
-    selectedDayLabel: {
-      color: SELECTED_TEXT_COLOR,
-    },
+		dayLabel: {
+			fontSize: 14 * scaler,
+			color: '#B8B8B8',
+			alignSelf: 'center',
+		},
 
-    dayLabelsWrapper: {
-      flexDirection: 'row',
-      borderBottomWidth: 1,
-      borderTopWidth: 1,
-      paddingTop: 10*scaler,
-      paddingBottom: 10*scaler,
-      alignSelf: 'center',
-      justifyContent: 'center',
-      backgroundColor: 'rgba(0,0,0,0.0)',
-      borderColor: 'rgba(0,0,0,0.2)'
-    },
+		selectedDayCusLabel: {
+			color: '#111111',
+		},
 
-    daysWrapper: {
-      alignSelf: 'center',
-      justifyContent: 'center'
-    },
+		selectedDayLabel: {
+			color: SELECTED_TEXT_COLOR,
+		},
 
-    dayLabels: {
-      width: 50*scaler,
-      fontSize: 12*scaler,
-      color: '#000',
-      textAlign: 'center'
-    },
+		dayLabelsWrapper: {
+			flexDirection: 'row',
+			// borderBottomWidth: 1,
+			// borderTopWidth: 1,
+			paddingTop: 10 * scaler,
+			paddingBottom: 10 * scaler,
+			alignSelf: 'center',
+			justifyContent: 'center',
+			backgroundColor: 'rgba(0,0,0,0.0)',
+			// borderColor: 'rgba(0,0,0,0.1)',
+		},
 
-    selectedDay: {
-      width: 30*scaler,
-      height:30*scaler,
-      borderRadius: 30*scaler,
-      alignSelf: 'center',
-      justifyContent: 'center'
-    },
+		daysWrapper: {
+			alignSelf: 'center',
+			justifyContent: 'center',
+			borderTopWidth: 1,
+			borderColor: 'rgba(0,0,0,0.1)',
+		},
 
-    selectedDayBackground: {
-      backgroundColor: SELECTED_BG_COLOR,
-    },
+		dayLabels: {
+			width: 50 * scaler,
+			fontSize: 12 * scaler,
+			color: '#B8B8B8',
+			textAlign: 'center',
+		},
 
-    selectedToday: {
-      width: 30*scaler,
-      height:30*scaler,
-      backgroundColor: TODAY_BG_COLOR,
-      borderRadius: 30*scaler,
-      alignSelf: 'center',
-      justifyContent: 'center'
-    },
+		selectedDay: {
+			width: 30 * scaler,
+			height: 30 * scaler,
+			borderRadius: 30 * scaler,
+			alignSelf: 'center',
+			justifyContent: 'center',
+		},
 
-    dayWrapper: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: 50*scaler,
-      height: 40*scaler,
-      backgroundColor: 'rgba(0,0,0,0.0)'
-    },
+		selectedDayBackground: {
+			backgroundColor: SELECTED_BG_COLOR,
+		},
 
-    startDayWrapper: {
-      width: 50*scaler,
-      height: 30*scaler,
-      borderTopLeftRadius: 20*scaler,
-      borderBottomLeftRadius: 20*scaler,
-      backgroundColor: SELECTED_BG_COLOR,
-      alignSelf: 'center',
-      justifyContent: 'center'
-    },
+		selectedToday: {
+			width: 30 * scaler,
+			height: 30 * scaler,
+			backgroundColor: TODAY_BG_COLOR,
+			borderRadius: 30 * scaler,
+			alignSelf: 'center',
+			justifyContent: 'center',
+			borderRadius: 8,
+			borderColor: '#ededed',
+			borderWidth: 1,
+		},
 
-    endDayWrapper: {
-      width: 50*scaler,
-      height: 30*scaler,
-      borderTopRightRadius: 20*scaler,
-      borderBottomRightRadius: 20*scaler,
-      backgroundColor: SELECTED_BG_COLOR,
-      alignSelf: 'center',
-      justifyContent: 'center'
-    },
+		dayWrapper: {
+			alignItems: 'center',
+			justifyContent: 'center',
+			width: 50 * scaler,
+			height: 40 * scaler,
+			backgroundColor: 'rgba(0,0,0,0.0)',
+		},
 
-    inRangeDay: {
-      width: 50*scaler,
-      height: 30*scaler,
-      backgroundColor: SELECTED_BG_COLOR,
-      alignSelf: 'center',
-      justifyContent: 'center'
-    },
+		startDayWrapper: {
+			width: 50 * scaler,
+			height: 30 * scaler,
+			borderTopLeftRadius: 20 * scaler,
+			borderBottomLeftRadius: 20 * scaler,
+			backgroundColor: SELECTED_BG_COLOR,
+			alignSelf: 'center',
+			justifyContent: 'center',
+		},
 
-    monthLabel: {
-      fontSize: 16*scaler,
-      color: '#000',
-      marginBottom: 10*scaler,
-      width: 180*scaler,
-      textAlign: 'center'
-    },
+		endDayWrapper: {
+			width: 50 * scaler,
+			height: 30 * scaler,
+			borderTopRightRadius: 20 * scaler,
+			borderBottomRightRadius: 20 * scaler,
+			backgroundColor: SELECTED_BG_COLOR,
+			alignSelf: 'center',
+			justifyContent: 'center',
+		},
 
-    headerWrapper: {
-      alignItems: 'center',
-      flexDirection: 'row',
-      alignSelf: 'center',
-      padding: 5*scaler,
-      paddingBottom: 3*scaler,
-      backgroundColor: 'rgba(0,0,0,0.0)'
-    },
+		inRangeDay: {
+			width: 50 * scaler,
+			height: 30 * scaler,
+			backgroundColor: SELECTED_BG_COLOR,
+			alignSelf: 'center',
+			justifyContent: 'center',
+		},
 
-    monthSelector: {
-      marginBottom: 10*scaler,
-      fontSize: 14*scaler,
-      width: 80*scaler
-    },
+		monthLabel: {
+			fontSize: 16 * scaler,
+			color: '#000',
+			marginBottom: 10 * scaler,
+			width: 180 * scaler,
+			textAlign: 'center',
+		},
 
-    prev: {
-      textAlign: 'left'
-    },
+		headerWrapper: {
+			alignItems: 'center',
+			flexDirection: 'row',
+			alignSelf: 'center',
+			padding: 5 * scaler,
+			paddingBottom: 3 * scaler,
+			backgroundColor: 'rgba(0,0,0,0.0)',
+		},
 
-    next: {
-      textAlign: 'right'
-    },
+		monthSelector: {
+			marginBottom: 10 * scaler,
+			fontSize: 14 * scaler,
+			width: 80 * scaler,
+		},
 
-    yearLabel: {
-      fontSize: 14*scaler,
-      fontWeight: 'bold',
-      color: '#000',
-      textAlign: 'center'
-    },
+		prev: {
+			textAlign: 'left',
+		},
 
-    weeks: {
-      flexDirection: 'column'
-    },
+		next: {
+			textAlign: 'right',
+		},
 
-    weekRow: {
-      flexDirection: 'row'
-    },
+		yearLabel: {
+			fontSize: 14 * scaler,
+			fontWeight: 'bold',
+			color: '#000',
+			textAlign: 'center',
+		},
 
-    disabledText: {
-      fontSize: 14*scaler,
-      color: '#BBBBBB',
-      alignSelf: 'center',
-      justifyContent: 'center'
-    }
-  };
+		weeks: {
+			flexDirection: 'column',
+		},
+
+		weekRow: {
+			flexDirection: 'row',
+		},
+
+		disabledText: {
+			fontSize: 14 * scaler,
+			color: '#BBBBBB',
+			alignSelf: 'center',
+			justifyContent: 'center',
+		},
+	};
 }
